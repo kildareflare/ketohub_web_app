@@ -81,9 +81,9 @@ describe('RecipeCardComponent', () => {
   it('getThumbnailUrls_recipt present__returns correct urls', () => {
     const GCS_BUCKET: string = 'ketohub-gcs1';
     component.recipe = recipe;
-    const expectedThumbUrl680 = `https://storage.googleapis.com/${GCS_BUCKET}/${recipe.key}-680w.jpg 680w`
-    const expectedThumbUrl560 = `https://storage.googleapis.com/${GCS_BUCKET}/${recipe.key}-560w.jpg 560w`
-    const expectedThumbUrl340 = `https://storage.googleapis.com/${GCS_BUCKET}/${recipe.key}-340w.jpg 340w`
+    const expectedThumbUrl680 = `https://storage.googleapis.com/${GCS_BUCKET}/${recipe.key}-680w.jpg 680w`;
+    const expectedThumbUrl560 = `https://storage.googleapis.com/${GCS_BUCKET}/${recipe.key}-560w.jpg 560w`;
+    const expectedThumbUrl340 = `https://storage.googleapis.com/${GCS_BUCKET}/${recipe.key}-340w.jpg 340w`;
     const result = component.getThumbnailUrls();
     expect(result.split(',')[0].trim()).toEqual(expectedThumbUrl680);
     expect(result.split(',')[1].trim()).toEqual(expectedThumbUrl560);
